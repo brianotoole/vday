@@ -1,0 +1,22 @@
+// Colors
+//brand colors
+$pink: #E82A71; //pink from logo
+$smoke: #fbfbfb;
+$lightgray: #eaeaea; //mostly for borders
+$gray: #555;
+$black: #1F1F1F;
+$gold: #A9977D;
+
+// Typography
+$font-heading: 'Merriweather', serif, Arial;
+$font-body: 'Lato', Helvetica, Arial;
+
+// Vendors
+@import "vendor/reset";
+@import "vendor/bootstrap.grid";
+@import "vendor/font-awesome";
+
+// Layout
+@import "wp";
+@import "layout";
+@import "responsive";
