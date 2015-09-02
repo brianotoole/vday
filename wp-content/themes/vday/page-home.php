@@ -6,18 +6,17 @@ Template Name: Page - Home
 get_header(); ?>
 <!--hero--> 
 <section class="hero">
- <!-- <div class="img" style="background: url('<?php bloginfo('stylesheet_directory'); ?>/img/hero_placeholder.jpg') 50% center no-repeat;background-size:cover;"></div> -->
-    <div class="img"></div>
+  <div class="img" style="background: url('http://i.istockimg.com/file_thumbview_approve/54746838/6/stock-photo-54746838-the-small-gift-box-on-around-of-bogey-pink-tone.jpg') 50% center no-repeat;background-size:cover;"></div>
 </section><!--/section.hero-->
 
 <section class="history">
 	<div class="intro row" id="contain">
 		<div class="col-sm-3 visit">
-			<p>About the Event</p>
-			  <a href="<?php bloginfo('url'); ?>/about">View</a>
+			<p>View</p>
+			  <a href="<?php bloginfo('url'); ?>/about">About the Event</a>
 			<hr />
-			<p>View our Sponsors</p>
-			  <a href="<?php bloginfo('url'); ?>/sponsors">View</a>
+			<p>View</p>
+			  <a href="<?php bloginfo('url'); ?>/sponsors">Our Sponsors</a>
 		</div><!--/.col-->
 		<div class="col-sm-9 quotes b-left">
 			<h2 class="section-title">Tagline: Lorem ipsum dolor sit amet, consectetuer adipiscing elit
@@ -33,29 +32,35 @@ get_header(); ?>
 <section class="memories">
 	<div class="intro row" id="contain">
 		<div class="col-sm-12">
-			<h2 class="section-title">Create Lasting Memories</h2> 
-			<p>And build friendships for life.</p>
+			<h2 class="section-title">Another Headline Here</h2> 
 		</div><!--/.col-->
 	</div><!--/.intro-->
 </section><!--/.memories-->
 
-<section class="memories-images">
+<section class="memories-two">
 	<div class="intro row" id="contain">
-		<div class="col-sm-12 images">
-		  <div class="stack rotated-left">
-	        	<img src="http://placeimg.com/290/292/nature">
-	      </div>
-	      <div class="stack rotated-middle">
-	        	<img src="http://placeimg.com/290/292/people">
-	      </div>
-	      <div class="stack rotated-right">
-	        	<img src="http://placeimg.com/290/292/art">
-	      </div>
-		</div>
-		<p>Another text paragraph: fdsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+		<div class="col-sm-12">
+			<div class="col-sm-4">
+			<h4>Title Title</h4>
+			<p>Blah Blah Blah dsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+			</div>
+			<div class="col-sm-4">
+			<h4>Title Title</h4>
+			<p>Blah Blah Blah dsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+			</div>
+			<div class="col-sm-4">
+			<h4>Title Title</h4>
+			<p>Blah Blah Blah dsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+			</div>
+			
+			<div class="col-sm-12">
+			<hr />
+			<p>Blah Blah Blah dsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+			</div>
+			
+		</div><!--/.col-->
 	</div><!--/.intro-->
-</section><!--/.memories-images-->
-
+</section><!--/.memories-->
 
 <div class="footer-contact overlay">
 	<div class="grid grid-pad row">

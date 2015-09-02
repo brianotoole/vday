@@ -70,7 +70,7 @@ add_action( 'after_setup_theme', 'vday_setup' );
  * Load Google Fonts.
  */
 function load_fonts() {
-            wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Merriweather|Lato:200,300,400,700', array(), '1.0');
+            wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Bitter|Raleway:200,300,400,700', array(), '1.0');
             wp_enqueue_style( 'googleFonts');
         }
     

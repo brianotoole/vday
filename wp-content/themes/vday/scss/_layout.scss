@@ -356,20 +356,16 @@ Top-Bar, Header, & Navigation
 	}
 	
 }//.top-bar
-//homepage only before scroll
-//homepage only after scroll
-body.home .site-header.fixed {background: rgba($pink, 0.85);border-bottom: 2px solid rgba($lightgray,0.05);}
+
 .site-header {
 	position: absolute;
 	top: 45px; //height of .top-bar
 	width: 100%;
 	padding: 0 20px;
 	background: transparent;
-	border-bottom: 8px solid $gold;
 	z-index: 9;
 	transform: translateY(0px);
 	transition: transform 0.3s;
-
 
 	.site-branding {
 		float: left;
@@ -378,6 +374,7 @@ body.home .site-header.fixed {background: rgba($pink, 0.85);border-bottom: 2px s
 	
 }
 .site-logo {
+	max-width: 250px;
 	-webkit-transform: scale(1) translateY(20px);
     -ms-transform: scale(1) translateY(20px);
     transform: scale(1) translateY(20px);
@@ -389,7 +386,8 @@ body.home .site-header.fixed {background: rgba($pink, 0.85);border-bottom: 2px s
 	top: 20px;
 	height: 85px;
 	padding: 2px;
-	background: rgba($pink, 0.85);
+	background: rgba(darken($pink,12%), 0.85);
+	border-bottom: 2px solid rgba($lightgray,0.05);
 	z-index: 2000;
 	transform: translateY(-20px);
 	-webkit-transform: translateY(-20px);
@@ -588,7 +586,7 @@ Homepage
 	background-color: $lightgray;
     width: 100%;
     height: 100%;
-    height: 260px;
+    height: 420px;
     
     .img {
          position: absolute;
@@ -604,26 +602,22 @@ Homepage
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-image: linear-gradient(to bottom, rgba(black, 0.8) 0%,rgba($gold, 0.8) 100%);
+		background-image: linear-gradient(to bottom, rgba(white, 0.8) 0%,rgba($black, 0.8) 100%);
 		opacity: 0.5; //lesser opacity = lesser gradient overlay
 		z-index: 2;
     }
-    
-    h1,h2,h3,h4,h5,h6,
-    p {
-    	position: relative;
-    	color: white;
-	    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-	    z-index: 4; //on top of gradient
-    }
-    
-    h1,h2,h3,h4,h5,h6 {
-		margin-top: 390px;
-    }
-    
+
 
   
 }//.hero
+
+//full-width template
+body.page-template-page-fullwidth .hero,
+body.search .hero,
+body.single .hero {
+	height: 255px;
+	border-bottom: 7px solid $gold;
+}
 
 
 .intro { //used inside all sections
@@ -843,83 +837,6 @@ Homepage
 	
 }//.about
 
-//header video on UM page template
-//header for fullwidth large hero template
-//header for testimonials page template
-body.page-template-page-um-video,
-body.page-template-page-fullwidth-largehero,
-body.page-template-page-testimonials {
-	.site-header {
-    	height: 0;
-    	background: transparent;
-	}
-	.site-header.fixed {
-		height: 85px;
-		background: rgba($pink, 0.85);
-		border-bottom: 2px solid rgba($lightgray,0.05);
-	}
-	.page-about section.history {
-		margin: -8px auto;
-	}
-}
-.video-overlay,
-.cover-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 600px;
-    background: rgba($black, 0.5); //overlay
-    z-index: 2;
-    
-    article {
-	    position: relative;
-	    top: 90%;
-	    -webkit-transform: translateY(-90%);
-	    -moz-transform: translateY(-90%);
-	    -ms-transform: translateY(-90%);
-	    transform: translateY(-90%);
-	    color: white;
-	    text-align: center;
-	    width: 100%;
-	    z-index: 5;
-	    
-	    p {
-		    font-family: $font-body;
-		    color: white;
-		    font-style: normal;
-		    font-size: 1.1em;
-		    line-height: 1.4em;
-		}
-		.button {
-			position: relative;
-			z-index: 9999;
-		}
-	}
-}
-video, 
-.ie8-poster,
-.cover-bottom  {
-    position: relative;
-    left: 0; 
-    bottom: 0;
-    min-width: 100%; 
-    width: auto; 
-    height: 600px;
-    object-fit: fill;
-    z-index: 1;
-}
-
-blockquote {
-	h2 {
-		line-height: 1.4em;
-	}
-}
-
-
-body.home .latest-news p {
-	font-size: 0.8em;
-}
 
 //section.history
 .history { 
@@ -929,6 +846,7 @@ body.home .latest-news p {
     margin: 0 auto;
     padding: 40px;
     text-align: left;
+    border-top: 7px solid $gold;
     
     .intro {
 	    background: transparent;
@@ -995,10 +913,7 @@ body.home .latest-news p {
 	}
 	
 	.section-title {
-		padding-bottom: 0;
-	}
-	.section-title.alumni {
-		padding-bottom: 30px;
+		padding: 50px 0 30px;
 	}
 	
 	p {
@@ -1014,146 +929,9 @@ body.home .latest-news p {
 
 
 //section.memories
-.memories-images { 
-	width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 0 60px 0;
-    background: white;
-    color: $black;
-    
-    .intro {
-	    background: transparent;
-		text-align: center;
-		max-width: 61%;
-	}
-	
-	.images {
-		margin: -120px auto 60px auto;
-		
-		img {
-			margin: 0 -7px;
-		}
-	}
-//alumni template
-.alumni-images {
-	
-	.intro {
-		max-width: 88%;
-	}
-}	
-	
+.memories-two { 
+	background: white;
 }//.memories-images
-
-/* Stacked images */
-.stack { 
-	float: left; 
-	position: relative; 
-	margin: 0 7px;
-	z-index: 10; 
-	img {
-		max-width: 100%; 
-		height: auto; 
-		vertical-align: bottom;
-		border: 8px solid white; 
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-		-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-	}
-	&:last-of-type {
-		margin-right: 0;
-	}
-	&:before,
-	&:after {
-		content: ''; 
-		width: 100%; 
-		height: 100%; 
-		position: absolute; 
-		border: 10px solid white; 
-		left: 0;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-		-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-	}
-}
-.stack:before { top: 10px; z-index: -10; } /* 1st element in stack (behind image) */	
-.stack:after { top: 10px; z-index: -20; } /* 2nd element in stack (behind image) */
-
-/*1st, left */
-.stack.rotated-left {
-	&:before {
-		-webkit-transform-origin: bottom left;
-		-moz-transform-origin: bottom left;
-		transform-origin: bottom left;
-		-webkit-transform: rotate(-2deg);
-		-moz-transform: rotate(-2deg);
-		transform: rotate(-2deg);		
-	}
-	&:after {
-	    -webkit-transform-origin: bottom left;
-		-moz-transform-origin: bottom left;
-		transform-origin: bottom left;
-		-webkit-transform: rotate(-4deg);
-		-moz-transform: rotate(-4deg);
-		transform: rotate(-4deg);		
-	}
-}
-
-/*2nd, middle */
-.stack.rotated-middle {
-	&:before {
-		-webkit-transform: rotate(2deg);
-		-moz-transform: rotate(2deg);
-		transform: rotate(2deg);		
-	}
-	&:after {
-		-webkit-transform: rotate(4deg);
-		-moz-transform: rotate(4deg);
-		transform: rotate(4deg);
-	}
-}
-	
-/*3rd, right */
-.stack.rotated-right { 
-	&:before {
-		-webkit-transform-origin: bottom left;
-		-moz-transform-origin: bottom left;
-		transform-origin: bottom left;
-		-webkit-transform: rotate(2deg);
-		-moz-transform: rotate(2deg);
-		transform: rotate(2deg);
-	}
-	&:after {
-		-webkit-transform-origin: bottom left;
-		-moz-transform-origin: bottom left;
-		transform-origin: bottom left;
-		-webkit-transform: rotate(4deg);
-		-moz-transform: rotate(4deg);
-		transform: rotate(4deg);
-	}
-
-}
-	
-/* Reset all rotations on hover 
-.stack:hover:before, 
-.stack:hover:after {
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	transform: rotate(0deg);
-}*/
-/*responsive*/
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-	.stack { float: none; width: auto; margin-bottom: 35px; }
-}
-
-
-
 
 
 // call to actions, call outs
@@ -1238,39 +1016,6 @@ Interior / About page template
 		}
 	}
 	
-.team {
-	h6 {
-		margin-bottom: 0;
-		padding-top: 20px;
-		color: $pink;
-		font-weight: 600;
-	}
-	p.title {
-		line-height: 1.2em;
-		padding-bottom: 7px
-	}
-	p.view {
-		color: $pink;
-		font-size: 0.75em;
-		padding: 0;
-		margin: 0;
-		font-style: italic;
-		border-top: 1px solid $lightgray;
-		&:after {
-			content: '\f101';
-			position: absolute;
-			padding-top: 2px;
-			padding-left: 5px;
-			font-family: fontAwesome;
-			font-size: 1em;
-			color: $gold;
-		}
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-}//.team
-
 }//.page-about
 
 /*--------------------------------------------------------------
@@ -1365,214 +1110,6 @@ aside {
     }
 }
 	
-/*--------------------------------------------------------------
-Interior Page Template: Faculty & Alumni single
---------------------------------------------------------------*/
-.faculty,
-.alumni {
-	.position {
-		color: $pink;
-		font-style: italic;
-	}
-}
-.alumni {
-	h6 {
-		margin-bottom: 0;
-		padding-top: 20px;
-		color: $pink;
-		font-weight: 600;
-	}
-}
-
-img.faculty,
-img.alumni {
-	border: 2px solid $lightgray;
-    padding: 2px;
-    background: white;
-}
-.latest-news {
-	a li, li a {
-		display: block;
-		margin: 10px 0 0;
-		padding: 0 0 10px;
-		color: $pink;
-		font-weight: 400;
-		font-style: normal;
-		list-style: none;
-		border-bottom: 2px solid #E0E0E0;
-		&:after {
-		    content: '\f101';
-		    position: absolute;
-		    padding-top: 2px;
-		    padding-left: 10px;
-		    font-family: fontAwesome;
-		    font-size: 1em;
-		    color: $gold;
-		}
-	}
-}
-.class-single {
-	h5 {
-		margin: 25px 0 20px;
-	    padding: 15px 0 15px;
-		font-weight: 600;
-		text-transform: uppercase;
-	    border-top: 2px solid $lightgray;
-	    border-bottom: 2px solid $lightgray;
-	}
-	span {
-		font-weight: 400;
-		font-size: 0.9em;	
-	}
-	.date {
-	
-		&:before {
-		 	content: '\f073';
-			font-family: fontAwesome;
-			font-size: 0.85em;
-			vertical-align: middle;
-			top: -3px;
-			padding-right: 5px;
-			position: relative;
-			color: $pink;
-		}
-	}
-	.cost {
-		 &:before {
-		 	content: '\f155';
-			font-family: fontAwesome;
-			font-size: 0.85em;
-			vertical-align: middle;
-			top: -3px;
-			padding-right: 5px;
-			position: relative;
-			color: $pink;
-		 }
-	}
-	.program {
-		 &:before {
-		 	content: '\f044';
-			font-family: fontAwesome;
-			font-size: 0.85em;
-			vertical-align: middle;
-			top: -3px;
-			padding-right: 5px;
-			position: relative;
-			color: $pink;
-		 }
-	}
-}
-/*--------------------------------------------------------------
-Interior Page Template: Classes / Class Search
---------------------------------------------------------------*/
-/*class search sidebar*/
-.classes-sidebar {
-	margin-top: 32px;
-	min-height: 900px;
-	padding: 30px 15px;
-	color: $black;
-    background: white;
-    border: 8px solid $gray;
-    text-align: left;
-    z-index: 100;
-    
-    .page-title {
-	    color: $pink;
-    }
-
-	.widget-title {
-		padding: 10px 12px;
-		margin: 15px 0 0 -15px;
-		font-size: 1.3em;
-		width: 112%;
-		background: $gray;
-		color: white;
-	}
-	
-	li, li a {
-		font-size: 1em;
-		margin: 10px 0 0;
-	    padding: 0 0 10px;
-		border-bottom: 2px solid $lightgray;
-		&:last-of-type {
-			border-bottom: none;
-		}
-	}
-	.current_page_item {
-		font-weight: 600;
-	}
-	
-	p.info {
-		font-size: 0.85em;
-		margin-bottom: 2px;
-	}
-	
-	select,input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
-    	margin: 10px 15px 0px 15px;
-    	width: 92%;
-	}	
-}
-.class-list {
-    margin-top: -30px;
-	
-	a {
-		text-decoration: none;
-		&:hover, &:focus {
-			text-decoration: none;
-		}
-	}
-	.thumbnail.default {
-		width: 100%;
-		height: 200px;
-		padding: 5px;
-		background: $smoke;
-		border: 1px solid rgba($lightgray, 0.5);
-		
-		i.fa {
-		
-		&:before {
-			position: absolute;
-			margin-top: 35px;
-		    margin-left: -25px;
-			font-size: 5em;
-			text-align: center;
-			width: 100%;
-			color: rgba($gold,0.5);
-		}
-	  }
-	}
-	.class-title {
-		color: $pink;
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
-	.date {
-		font-weight: 600;
-	}
-	.date,p {
-		padding: 2.5px 0;
-	}
-}//.class-list
-
-.results-total {
-	margin: 50px 0;
-	
-	p, h3, h5 {
-		margin: 0 20px 5px;
-	}
-	h5 {
-		font-weight: 600;
-	}
-	span {
-		text-transform: uppercase;
-	}
-	form {
-		margin-top: -70px;
-		padding: 8px;
-	}
-}
-
-//classes view more button custom excerpt
 .view a {
 	color: $pink;
 	padding: 0;
@@ -1594,62 +1131,6 @@ Interior Page Template: Classes / Class Search
 
 }	
 
-/* sidebar filtering */
-@import "filter";
-
-/* the loading icon */
-.umloading {
-	width: 20%;
-	height: 22px;
-	margin-top: 4px;
-	background: url('img/ajax_loader.gif') no-repeat 50% 50%;
-}
-/* the find classes form id */
-#uwpqsf_id {
-	margin-top: 5px;
-	border: none;
-}
-/* main labels... */
-.uwpqsf_class > span[class*='taxolabel-'], .uwpqsf_class > span[class*='cmflabel-'] {
-	padding: 0;
-}
-.uwpqsf_class>span[class*='cmflabel-'] {
-    padding: 0;
-    margin: 30px 0 0px;
-    padding-bottom: 0;
-}
-.uwpqsf_class>span[class*='taxolabel-'], .uwpqsf_class>span[class*='cmflabel-'] {
-	padding: 10px 12px;
-    margin: 15px 0 0 -15px;
-    font-size: 1.1em;
-    width: 112%;
-    background: $gray;
-    color: white;
-}
-/* the choices... */
-.uwpqsf_class > label {
-	font-size: 0.95em;
-	font-weight: 400;
-	margin: 10px 0 0;
-    padding: 0 0 10px;
-	border-bottom: 2px solid $lightgray;
-	&:last-of-type {
-		border-bottom: none;
-	}
-}
-/* the search form, if needed */
-input#uwpqsf_id_key {
-	background: white;
-	margin-bottom: 5px;
-	border: 2px solid $lightgray;
-}
-/* the submit btn */
-.uwpqsf_submit {
-    text-align: right;
-    margin-bottom: 15px;
-    width: 98%;
-    display: block;
-}
 
 /*--------------------------------------------------------------
 Footer
@@ -1663,7 +1144,7 @@ Footer
 .footer-contact {
 	padding: 50px 0 80px;
 	text-align: center;
-	background: url('http://cdn.decordsgn.com/design/storiesandmore.org.uk/wp/wp-content/uploads/2012/08/Dance-Studio.jpg') no-repeat center center;
+	background: url('http://i.istockimg.com/file_thumbview_approve/56847758/6/stock-photo-56847758-valentine-gift-with-red-rose-and-love-hearts.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 	color: white;

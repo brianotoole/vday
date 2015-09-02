@@ -1,6 +1,3 @@
-/* Media Queries ----------------------------------------------------------- */
-
-
 /* container size & below */
 @media screen and (max-width: 1170px) {
 
@@ -200,15 +197,15 @@ h6 { font-size: 16px; line-height: 20px; font-weight: 600; text-transform: upper
 	
 	
 	.hero {
+	
+		height: 110px;
+		
 		.img {
 			height: 110px;
 			background: $pink!important;
 		}
 		h2 {
 			margin-top: 110px;
-		}
-		&:before {
-			top: 110px; //height of .img
 		}
 		
 	}

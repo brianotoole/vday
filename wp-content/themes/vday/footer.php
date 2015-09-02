@@ -18,36 +18,27 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	
 		<div class="footer-top grid grid-pad">
-			<div class="award col-3-12">
-				<h6>Awards</h6>
-				<p>- Victory Cup Winner </p>
-				<p>- Best of N. Tampa, 2014</p>
-				<p>- FDC Studio of Excellence</p>
-				<p></p>
+			<div class="award col-4-12">
+				<h6>Title</h6>
+				<p>logo here?</p>
 			</div><!-- .site-info -->
-			<div class="links col-3-12">
-				<h6>Links</h6>
+			<div class="links col-4-12">
+				<h6>Sitemap</h6>
 				<ul>
-					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">Link</a></li>
-					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">Careers</a></li>
-					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">Donation Requests</a></li>
-					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">FAQ</a></li>
-					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">Press</a></li>
+					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">About</a></li>
+					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">Tickets</a></li>
+					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">Contact</a></li>
+					<li><i class="fa fa-chevron-right"></i><a href="<?php bloginfo('url'); ?>/contact">Sponsors</a></li>
 				</ul>
 			</div><!-- .site-info -->
-			<div class="family col-3-12">
-				<h6>vday Family</h6>
-				<ul>
-					<li><i class="fa fa-chevron-right"></i><a href="http://tbttt.org" target="_blank">Tampa Bay Triple Threat Theatre</a></li>
-					<li><i class="fa fa-chevron-right"></i></i><a href="#">Classical Ballet of Tampa</a></li>
-			</div><!-- .site-info -->
-			<div class="ph col-3-12">
+
+			<div class="ph col-4-12">
 				<h6>Contact</h6>
 					<p>
-						<a href="tel:#">813-555-5555</a>
+						<a href="tel:#">850-555-5555</a>
 					</p>
 					<p>
-						1234 Elm St. Tampa, FL
+						1234 Elm St. Tallahassee, FL
 					</p>
 			</div><!-- .site-info -->
         </div><!-- grid --> 
@@ -71,8 +62,8 @@
 						<li><i class="fa fa-youtube"></i></li>
 					</a>
 				</ul>
-			</div><!-- .site-info -->
-        </div><!-- grid --> 
+			</div><!-- /.sm -->
+        </div><!-- /grid --> 
 	</footer><!-- #colophon -->
 
 </div><!-- #page --> 

@@ -6,7 +6,7 @@ Template Name: Page - Fullwidth
 get_header(); ?> 
 
 <section class="hero">
-
+  <div class="img" style="background: url('<?php bloginfo('stylesheet_directory'); ?>/img/brick.png');"></div>
 </section><!--/section.hero-->
         
 	<div class="grid">
