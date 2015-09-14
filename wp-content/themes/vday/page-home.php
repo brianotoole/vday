@@ -6,23 +6,22 @@ Template Name: Page - Home
 get_header(); ?>
 <!--hero--> 
 <section class="hero">
-  <div class="img" style="background: url('http://i.istockimg.com/file_thumbview_approve/54746838/6/stock-photo-54746838-the-small-gift-box-on-around-of-bogey-pink-tone.jpg') 50% center no-repeat;background-size:cover;"></div>
+  <div class="img" style="background: url('<?php the_field('home_hero_img'); ?>') 50% center no-repeat;background-size:cover;"></div>
+
 </section><!--/section.hero-->
 
 <section class="history">
 	<div class="intro row" id="contain">
 		<div class="col-sm-3 visit">
 			<p>View</p>
-			  <a href="<?php bloginfo('url'); ?>/about">About the Event</a>
+			  <a href="<?php the_field('home_link1_url'); ?>"><?php the_field('home_link1_name'); ?></a>
 			<hr />
 			<p>View</p>
-			  <a href="<?php bloginfo('url'); ?>/sponsors">Our Sponsors</a>
+			  <a href="<?php the_field('home_link2_url'); ?>"><?php the_field('home_link2_name'); ?></a>
 		</div><!--/.col-->
 		<div class="col-sm-9 quotes b-left">
-			<h2 class="section-title">Tagline: Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-			</h2> 
-			<h5 class="breakout">Breakout: Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h5>
-			<p>Intro paragraph: fdsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+			<h3 class="section-title"><?php the_field('home_tagline'); ?></h3> 
+			<h6 class="breakout"><?php the_field('home_intro'); ?></h6>
 		</div><!--/.col-->
 	</div><!--/.intro-->
 </section><!--/.history-->
@@ -32,7 +31,7 @@ get_header(); ?>
 <section class="memories">
 	<div class="intro row" id="contain">
 		<div class="col-sm-12">
-			<h2 class="section-title">Another Headline Here</h2> 
+			<h2 class="section-title"><?php bloginfo('site_name'); ?></h2> 
 		</div><!--/.col-->
 	</div><!--/.intro-->
 </section><!--/.memories-->
@@ -40,24 +39,11 @@ get_header(); ?>
 <section class="memories-two">
 	<div class="intro row" id="contain">
 		<div class="col-sm-12">
-			<div class="col-sm-4">
-			<h4>Title Title</h4>
-			<p>Blah Blah Blah dsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-			</div>
-			<div class="col-sm-4">
-			<h4>Title Title</h4>
-			<p>Blah Blah Blah dsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-			</div>
-			<div class="col-sm-4">
-			<h4>Title Title</h4>
-			<p>Blah Blah Blah dsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-			</div>
-			
-			<div class="col-sm-12">
-			<hr />
-			<p>Blah Blah Blah dsafsdafsed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-			</div>
-			
+			<?php while ( have_posts() ) : the_post(); ?>
+			  <div class="entry-content">
+			    <?php the_content(); ?>
+			  </div>
+			<?php endwhile; // end of the loop. ?>
 		</div><!--/.col-->
 	</div><!--/.intro-->
 </section><!--/.memories-->
@@ -66,8 +52,8 @@ get_header(); ?>
 	<div class="grid grid-pad row">
 	
 		<div class="col-sm-12">
-			<h3>Can't wait for the event?</h3>
-			<p>Purchase your tickets today.</p>
+			<h3><?php the_field('footer_tagline'); ?></h3>
+			<p><?php the_field('footer_text'); ?></p>
 			<a class="button gold" href="<?php bloginfo('url'); ?>/purchase-tickets">Purchase Tickets</a>
 		</div>
 		
