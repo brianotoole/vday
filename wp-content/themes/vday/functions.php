@@ -179,7 +179,6 @@ return '...';
 }
 
 
-
 /**
  * Custom template tags for this theme.
  */
@@ -190,75 +189,6 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
-
-
-/**
- * Classes search custom output
- */
-add_filter('uwpqsf_result_tempt', 'customize_output', '', 4);
-function customize_output($results , $arg, $id, $getdata ){
-	 // The Query
-            $apiclass = new uwpqsfprocess();
-            $query = new WP_Query( $arg ); ?>
-	<div class="results-total">
-		<?php  
-			$numberOfQueries = $query->found_posts;
-			
-			if ($numberOfQueries == 1) {?>
-				<h5><?php echo $numberOfQueries; ?> result found:</h5>
-				
-			<?}elseif ($numberOfQueries == 0){?>
-				<h5>No results found.</h5>
-				
-			<?}else{?>
-				<h5><?php echo $numberOfQueries; ?> results found:</h5>
-			<?}
-			
-
-			
-		?> 
-	</div>
-
-<?php	ob_start();	$result = '';
-	// The Loop
-		if ( $query->have_posts() ) {
-			while ( $query->have_posts() ) {
-				$query->the_post();
-			$thumb_id = get_post_thumbnail_id();
-			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'medium', true);
-			$thumb_url = $thumb_url_array[0];
-			
-			?>
-			  <a href="<?php the_permalink() ?>">
-				<div class="col-sm-4">
-				  <?php if (has_post_thumbnail( $post->ID ) ): //if featured image is uploaded... ?>
-				  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); $image = $image[0]; ?>
-				  <img class="thumbnail" src="<?php echo $image; ?>">
-				  <?php else: //if no featured image is uploaded, show default icon img ?>
-				  <div class="thumbnail default"><i class="fa fa-music"></i></div>
-				  <?php endif; ?>
-				</div><!--/.col-->
-				<div class="col-sm-8 descrip">
-				  <h3 class="class-title"><?php the_title(); ?></h3>
-				  <?php if( get_field('class_start_date') ): ?>
-				  <p class="date"><?php the_field('class_start_date'); ?> - <?php the_field('class_end_date'); ?></p>  
-				  <?php else: //is "post" not "class" ?>
-				  <p class="date"><span class="cat-title"><?php global $post; $category = get_the_category($post->ID); echo $category[0]->name; ?></span> <?php echo get_the_date( '/ l, F j' ); ?>
-				  <?php endif; ?>
-				  <p><?php vday_excerpt('vday_excerpt_length','vday_view_more_class'); ?></p>
-				</div><!--/.col-->
-			  </a>
-				<div class="clear"></div><hr />
-	<?}
-                        echo  $apiclass->ajax_pagination($arg['paged'],$query->max_num_pages, 4, $id, $getdata);
-		 } else {
-					 echo  '<p style="padding: 0 20px;">There were no results found with your criteria. Please try selecting different options.</p>';
-				}
-				/* Restore original Post Data */
-				wp_reset_postdata();
-		$results = ob_get_clean();		
-			return $results;
-}
 
 //* Remove header junk
 /*Removes RSD, XMLRPC, WLW, WP Generator, ShortLink and Comment Feed links*/
