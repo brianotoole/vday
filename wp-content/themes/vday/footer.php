@@ -3,15 +3,6 @@
  * The template for displaying the footer.
  */
 ?>
-	<div class="testimonials">
-	  <div class="footer-contact">
-		<div class="grid row">
-			<div class="col-sm-12 no-padding">
-				<?php get_template_part( 'part', 'testimonials' ); ?>
-			</div>
-		</div><!--/.grid -->
-	  </div><!--/.footer-contact -->
-	</div><!--/.testimonials -->
 
 	</section><!--/#content --> 
 
