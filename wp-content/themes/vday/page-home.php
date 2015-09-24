@@ -31,7 +31,7 @@ get_header(); ?>
 <section class="memories">
 	<div class="intro row" id="contain">
 		<div class="col-sm-12">
-			<h2 class="section-title"><?php bloginfo('site_name'); ?></h2> 
+			<h2 class="section-title"><?php the_field('home_middle_text'); ?></h2> 
 		</div><!--/.col-->
 	</div><!--/.intro-->
 </section><!--/.memories-->
