@@ -6,7 +6,7 @@ Template Name: Page - Fullwidth
 get_header(); ?> 
 
 <section class="hero">
-  <div class="img" style="background: url('<?php bloginfo('stylesheet_directory'); ?>/img/brick.png');"></div>
+  <div class="img" style="background: url('http://valentinesdaysoiree.sachsdigital.com/wp-content/uploads/2015/09/iStock_000054746838_Full.jpg');"></div>
 </section><!--/section.hero-->
         
 	<div class="grid">
