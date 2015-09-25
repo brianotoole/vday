@@ -105,10 +105,10 @@ function vday_scripts() {
 
 	//show contact form 7 plugin scripts, only on contact page...
 	
-	if (is_page('contact') ) {
-     	 wpcf7_enqueue_scripts();
-	 	 wpcf7_enqueue_styles();
-    }
+	//if (is_page('contact') ) {
+    // 	 wpcf7_enqueue_scripts();
+	// 	 wpcf7_enqueue_styles();
+    //}
    
 	
 	//wp_enqueue_script('jquery');
